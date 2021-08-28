@@ -1,3 +1,55 @@
+- [How to check your Git configuration:](#how-to-check-your-git-configuration)
+- [How to setup your Git username:](#how-to-setup-your-git-username)
+- [How to setup your Git user email:](#how-to-setup-your-git-user-email)
+- [How to cache your login credentials in Git:](#how-to-cache-your-login-credentials-in-git)
+- [How to initialize a Git repo:](#how-to-initialize-a-git-repo)
+- [How to add a file to the staging area in Git:](#how-to-add-a-file-to-the-staging-area-in-git)
+- [How to add all files in the staging area in Git](#how-to-add-all-files-in-the-staging-area-in-git)
+- [How to add only certain files to the staging area in Git](#how-to-add-only-certain-files-to-the-staging-area-in-git)
+- [How to check a repository's status in Git:](#how-to-check-a-repositorys-status-in-git)
+- [How to commit changes in the editor in Git:](#how-to-commit-changes-in-the-editor-in-git)
+- [How to commit changes with a message in Git:](#how-to-commit-changes-with-a-message-in-git)
+- [How to commit changes (and skip the staging area) in Git:](#how-to-commit-changes-and-skip-the-staging-area-in-git)
+- [How to see your commit history in Git:](#how-to-see-your-commit-history-in-git)
+- [How to see your commit history including changes in Git:](#how-to-see-your-commit-history-including-changes-in-git)
+- [How to see a specific commit in Git:](#how-to-see-a-specific-commit-in-git)
+- [How to see log stats in Git:](#how-to-see-log-stats-in-git)
+- [How to see changes made before committing them using "diff" in Git:](#how-to-see-changes-made-before-committing-them-using-diff-in-git)
+- [How to see changes using "git add -p":](#how-to-see-changes-using-git-add--p)
+- [How to remove tracked files from the current working tree in Git:](#how-to-remove-tracked-files-from-the-current-working-tree-in-git)
+- [How to rename files in Git:](#how-to-rename-files-in-git)
+- [How to ignore files in Git:](#how-to-ignore-files-in-git)
+- [How to revert unstaged changes in Git:](#how-to-revert-unstaged-changes-in-git)
+- [How to revert staged changes in Git:](#how-to-revert-staged-changes-in-git)
+- [How to amend the most recent commit in Git:](#how-to-amend-the-most-recent-commit-in-git)
+- [How to rollback the last commit in Git:](#how-to-rollback-the-last-commit-in-git)
+- [How to rollback an old commit in Git:](#how-to-rollback-an-old-commit-in-git)
+- [How to create a new branch in Git:](#how-to-create-a-new-branch-in-git)
+- [How to switch to a newly created branch in Git:](#how-to-switch-to-a-newly-created-branch-in-git)
+- [How to list branches in Git:](#how-to-list-branches-in-git)
+- [How to create a branch in Git and switch to it immediately:](#how-to-create-a-branch-in-git-and-switch-to-it-immediately)
+- [How to delete a branch in Git:](#how-to-delete-a-branch-in-git)
+- [How to merge two branches in Git:](#how-to-merge-two-branches-in-git)
+- [How to show the commit log as a graph in Git:](#how-to-show-the-commit-log-as-a-graph-in-git)
+- [How to show the commit log as a graph of all branches in Git:](#how-to-show-the-commit-log-as-a-graph-of-all-branches-in-git)
+- [How to abort a conflicting merge in Git:](#how-to-abort-a-conflicting-merge-in-git)
+- [How to add a remote repository in Git](#how-to-add-a-remote-repository-in-git)
+- [How to see remote URLs in Git:](#how-to-see-remote-urls-in-git)
+- [How to get more info about a remote repo in Git:](#how-to-get-more-info-about-a-remote-repo-in-git)
+- [How to push changes to a remote repo in Git:](#how-to-push-changes-to-a-remote-repo-in-git)
+- [How to pull changes from a remote repo in Git:](#how-to-pull-changes-from-a-remote-repo-in-git)
+- [How to check remote branches that Git is tracking:](#how-to-check-remote-branches-that-git-is-tracking)
+- [How to fetch remote repo changes in Git:](#how-to-fetch-remote-repo-changes-in-git)
+- [How to check the current commits log of a remote repo in Git](#how-to-check-the-current-commits-log-of-a-remote-repo-in-git)
+- [How to merge a remote repo with your local repo in Git:](#how-to-merge-a-remote-repo-with-your-local-repo-in-git)
+- [How to get the contents of remote branches in Git without automatically merging:](#how-to-get-the-contents-of-remote-branches-in-git-without-automatically-merging)
+- [How to push a new branch to a remote repo in Git:](#how-to-push-a-new-branch-to-a-remote-repo-in-git)
+- [How to remove a remote branch in Git:](#how-to-remove-a-remote-branch-in-git)
+- [How to use Git rebase:](#how-to-use-git-rebase)
+- [How to run rebase interactively in Git:](#how-to-run-rebase-interactively-in-git)
+- [How to force a push request in Git:](#how-to-force-a-push-request-in-git)
+- [How to temporarily store modified, tracked files in order to change branches:](#how-to-temporarily-store-modified-tracked-files-in-order-to-change-branches)
+
 ## How to check your Git configuration:
 
 The command below returns a list of information about your git configuration including user name and email:
@@ -210,7 +262,7 @@ git reset HEAD -p
 
 ## How to amend the most recent commit in Git:
 
-`git commit --amend`  allows you to modify and add changes to the most recent commit.
+`git commit --amend`  allows you to modify and add changes to the most recent commit. - Revert last commit
 
 ```
 git commit --amend
@@ -469,24 +521,21 @@ But this isn't something that you want to do with public repos.
 git push -f
 ```
 
-# Temporarily store modified, tracked files in order to change branches
+## How to temporarily store modified, tracked files in order to change branches:
 
-## How to save modified and staged change
+to save modified and staged change
 ```
 git stash
 ```
-
-## How to list stack-order of stashed file changes
+to list stack-order of stashed file changes
 ```
 git stash list
 ```
-
-## How to write working from top of stash stack
+to write working from top of stash stack
 ```
 git stash pop
 ```
-
-## How to discard the changes from top of stash stack
+to discard the changes from top of stash stack
 ```
 git stash drop
 ```
