@@ -468,3 +468,25 @@ But this isn't something that you want to do with public repos.
 ```
 git push -f
 ```
+
+# Temporarily store modified, tracked files in order to change branches
+
+## How to save modified and staged change
+```
+git stash
+```
+
+## How to list stack-order of stashed file changes
+```
+git stash list
+```
+
+## How to write working from top of stash stack
+```
+git stash pop
+```
+
+## How to discard the changes from top of stash stack
+```
+git stash drop
+```
